@@ -1,0 +1,38 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route1
+          predicates:
+            - Path=/service-hotel/**
+          filters:
+            - RewritePath=/service-hotel/(?<s>.*), /${s}
+            - name: CircuitBreaker
+              args:
+                name: fallabck-mshotel
+                fallbackuri: forward:/defaultHotels
+          uri: lb://ms-hotel
+
+        - id: route2
+          predicates:
+            - Path=/service-pellerin/**
+          filters:
+            - RewritePath=/service-pellerin/(?<s>.*), /${s}
+            - name: CircuitBreaker
+              args:
+                  name: fallback-mspellerin
+                  fallbackuri: forward:/defaultPellerins
+          uri: lb://ms-pellerin
+
+
+        - id: route3
+          predicates:
+            - Path=/service-vol/**
+          filters:
+            - RewritePath=/service-vol/(?<s>.*), /${s}
+            - name: CircuitBreaker
+              args:
+                name: fallback-msvol
+                fallbackuri: forward:/defaultVols
+          uri: lb://ms-vol
+

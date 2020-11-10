@@ -1,0 +1,27 @@
+
+<h3 style="text-align: center;">Mettre à jour les détails d'un pellerin</h3>
+<div class="container" style="width: 400px;margin-left: auto;margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Numéro de passeport</label>
+      <input [disabled]="true" type="text" class="form-control" id="numPasseport" required [(ngModel)]="pellerin.numPasseport"
+             name="numPasseport">
+    </div>
+    <div class="form-group">
+      <label for="name">Nom du pellerin</label>
+      <input type="text" class="form-control" id="nom" required [(ngModel)]="pellerin.nom" name="prenom">
+    </div>
+    <div class="form-group">
+      <label for="name">Prenom du pellerin</label>
+      <input type="text" class="form-control" id="prenom" required [(ngModel)]="pellerin.prenom" name="prenom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date de naissance</label>
+      <input type="Date" class="form-control" id="dateN" required [(ngModel)]="pellerin.dateN"
+             name="dateN">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

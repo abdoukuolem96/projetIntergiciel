@@ -1,0 +1,83 @@
+<!--<h1 style="text-align: center;">Ajouter un hôtel</h1>-->
+<!--<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">-->
+<!--  <form (ngSubmit)="onSubmit()">-->
+
+<!--    <div class="form-group">-->
+<!--      <input #id_reservation="ngModel" [(ngModel)]="reservation.id_reservation" name="id_reservation" type="hidden">-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--      <label for="name">Hotel</label>-->
+<!--      <input type="text" placeholder="ID de l'hôtel" #id_hotel="ngModel"-->
+<!--             [class.is-invalid]="id_hotel.invalid && id_hotel.touched"-->
+<!--             class="form-control" id="id_hotel" required [(ngModel)]="reservation.hotel" name="id_hotel">-->
+<!--      <small class="text-danger" [class.d-none]="id_hotel.valid || id_hotel.untouched">-->
+<!--        ID de l'hôtel est requis</small>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--      <label for="name">Pellerin</label>-->
+<!--      <input type="text" placeholder="Numéro de passeport" #numPasseport="ngModel"-->
+<!--             [class.is-invalid]="numPasseport.invalid && numPasseport.touched"-->
+<!--             class="form-control" id="num_passeport" required [(ngModel)]="reservation.pellerin" name="num_passeport">-->
+<!--      <small class="text-danger" [class.d-none]="numPasseport.valid || numPasseport.untouched">-->
+<!--        num_passeport est requis-->
+<!--      </small>-->
+<!--    </div>-->
+
+<!--    <button type="submit" class="btn btn-success">Submit</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+<!--<div [hidden]="!submitted">-->
+<!--  <h4>Avec succès!</h4>-->
+<!--  &lt;!&ndash;<button class="btn btn-success" (click)="newFlight()">Add</button>&ndash;&gt;-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--<h1 style="text-align: center;"><br/><br/>Faire une réservation</h1>-->
+<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+<!--    <div class="form-group">-->
+<!--      <input [disabled]="true" #numPasseport="ngModel" [(ngModel)]="reservation.pellerin" name="pellerin" type="text">-->
+<!--    </div>-->
+    <div class="container">
+      <table>
+        <thead>
+        <tr>
+          <th>Nom de l'hôtel</th>
+          <th>Ville</th>
+          <th>Adresse</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let hotel of hotels|async">
+          <td>{{hotel.nomHotel}}</td>
+          <td>{{hotel.localisation}}</td>
+          <td>{{hotel.adresse}}</td>
+          <td>
+            <div class="form-group">
+              <button type="submit" class="btn btn-danger">Réserver</button>
+            </div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+    </div>
+
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Avec succès!</h4>
+</div>

@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">Ajouter un hôtel</h1>
+<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <input #numPasseport="ngModel" [(ngModel)]="pellerin.numPasseport" name="numPasseport" type="hidden">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nom complet du pellerin</label>
+      <input type="text" placeholder="Nom du pellerin" #nom="ngModel"
+             [class.is-invalid]="nom.invalid && nom.touched"
+             class="form-control" id="nom" required [(ngModel)]="pellerin.nom" name="nom">
+      <small class="text-danger" [class.d-none]="nom.valid || nom.untouched">
+        Nom du pellerin est requis</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Prenom du pellerin</label>
+      <input type="text" placeholder="Prenom du pellerin" #prenom="ngModel"
+             [class.is-invalid]="prenom.invalid && prenom.touched"
+             class="form-control" id="prenom" required [(ngModel)]="pellerin.prenom" name="prenom">
+      <small class="text-danger" [class.d-none]="prenom.valid || prenom.untouched">
+        prenom du pellerin est requis</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date de naissance</label>
+      <input type="Date" placeholder="Date de naissance" #dateN="ngModel"
+             [class.is-invalid]="dateN.invalid && dateN.touched"
+             class="form-control" id="dateN" required [(ngModel)]="pellerin.dateN" name="dateN">
+      <small class="text-danger" [class.d-none]="dateN.valid || dateN.untouched">
+        La date de naissance est requise
+      </small>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Avec succès!</h4>
+</div>

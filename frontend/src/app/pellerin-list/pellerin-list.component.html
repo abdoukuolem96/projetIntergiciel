@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Liste des pellerins</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hide">Numéro de passeport</th>
+        <th>Nom du pellerin</th>
+        <th>Prenom du pellerin</th>
+        <th>Date de naissance</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pellerin of pellerins|async">
+        <td class="hide">{{pellerin.numPasseport}}</td>
+        <td>{{pellerin.nom}}</td>
+        <td>{{pellerin.prenom}}</td>
+        <td>{{pellerin.dateN}}</td>
+        <td>
+          <button (click)="removePellerin(pellerin.numPasseport)" class="btn btn-danger">Delete</button>
+          <button (click)="modifyPellerin(pellerin.numPasseport)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <button (click)="pellerinDetails(pellerin.numPasseport)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

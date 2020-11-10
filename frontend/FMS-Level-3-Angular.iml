@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/add-scheduled-flight" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/airport-details" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/airport-list" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/booking-confirmed" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/booking-details" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/booking-list" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/create-airport" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/create-booking" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/create-user" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/home" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/list-user" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/login" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/logout" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/modify-scheduled-flight" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/search-scheduled-flight" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/show-scheduled-flights" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/signup" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/update-airport" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/update-booking" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/update-user" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/user-details" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/welcome-admin" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

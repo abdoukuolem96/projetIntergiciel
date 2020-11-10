@@ -1,0 +1,29 @@
+<!-- nav-->
+<div style="padding: 20px;">
+    <nav class="navbar navbar-expand-md navbar-dark  ">
+        <a routerLink="vol" role="button" routerLinkActive="active">Acceuil</a>
+        <a routerLink="" role="button" routerLinkActive="active">Service de hajj</a>
+        <a routerLink="" role="button" routerLinkActive="active">Contact</a>
+        <a routerLink="" role="button" routerLinkActive="active">Propos</a>
+        <a routerLink="add" role="button" routerLinkActive="active">Add Vol/Admin</a>
+        <a routerLink="findbyage" role="button" routerLinkActive="active">Search</a>
+        <a routerLink="addHotel" role="button" routerLinkActive="active">addHotel</a>
+        <a routerLink="hotels" role="button" routerLinkActive="active">hotels</a>
+        <a routerLink="hotelDetails/:id_hotel" role="button" routerLinkActive="active">hotelDetails</a>
+        <a routerLink="pellerinDetails/:numPasseport'" role="button" routerLinkActive="active">pellerinDetails</a>
+        <a routerLink="pellerins" role="button" routerLinkActive="active">pellerins</a>
+        <a routerLink="addPellerin" role="button" routerLinkActive="active">addPellerin</a>
+
+    </nav>
+
+    <!-- HEADER STARTS -->
+    <app-header></app-header>
+    <!-- HEADER ENDS -->
+
+    <router-outlet></router-outlet>
+    <!--<app-make-reservation></app-make-reservation>-->
+
+    <!-- FOOTER STARTS -->
+    <app-footer></app-footer>
+    <!-- FOOTER ENDS -->
+</div>

@@ -1,0 +1,17 @@
+<h2 style="text-align: center;">Infos de l'hôtel</h2>
+<hr/>
+<div *ngIf="pellerin" style="margin-left: auto;margin-right: auto;">
+  <div>
+    <label><b>Nom du pellerin</b></label> {{pellerin.nom}}
+  </div>
+  <div>
+    <label><b>Prenom du pellerin</b></label> {{pellerin.prenom}}
+  </div>
+  <div>
+    <label><b>Date de naissance </b></label> {{pellerin.dateN}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à la liste des pellerins</button><br>
